@@ -3,9 +3,10 @@ package com.randebrock.java.development.Main;
 public class Main {
     public static void main(String[] args) {
 
-        int[] numbersArray = { 5,20,5,6,7,8,9};
+        int[] numbersArray = { 5,2,56,6,3,7,8,9, 50, 45};
 
         difference(numbersArray);
+        smallestAndSecondSmallest(numbersArray);
 
     }
     public static void difference(int[] array){
@@ -22,14 +23,29 @@ public class Main {
                     min = array[i];
                 }
             }
-            System.out.println("the max number is:" max + "  and the min is:" + min);
+            System.out.println("the max number is: "+  max + "  and the min is: " + min);
         }
+    }
+
+    public static void smallestAndSecondSmallest(int[] array) {
+        int min = array[0];
+        int secondMin = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < min) {
+                min = array[i];
+            }
+        }
+        for (int i = 1; i < array.length; i++) {
+            if (secondMin > min && array[i] != min && array[i] < secondMin) {
+                secondMin = array[i];
+            }
+        }
+        System.out.println(min + " " + secondMin);
     }
 
 }
 /*
-Write a method in Java to get the difference between the largest and smallest values in an array of integers.
- The length of the array must be 1 and above.
+
 Write a method in Java to find the smallest and second smallest elements of a given array and print it in the console.
 Write a method in Java that resolves this mathematical expression where x and y are two variables pre-set in your code.
  */
