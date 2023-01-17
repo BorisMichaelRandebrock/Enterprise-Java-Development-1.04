@@ -7,6 +7,8 @@ public class Main {
 
         difference(numbersArray);
         smallestAndSecondSmallest(numbersArray);
+        double result = weirdMathMethod(2, 2);
+        System.out.println(result);
 
     }
     public static void difference(int[] array){
@@ -41,6 +43,10 @@ public class Main {
             }
         }
         System.out.println(min + " " + secondMin);
+    }
+
+    public static double weirdMathMethod(double numbX, double numbY){
+        return Math.pow(numbX,2) + Math.pow(((4*numbY)/5)-numbX,2);
     }
 
 }
