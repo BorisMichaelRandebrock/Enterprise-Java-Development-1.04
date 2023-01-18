@@ -8,7 +8,7 @@ public class Main {
         difference(numbersArray);
         smallestAndSecondSmallest(numbersArray);
         double result = weirdMathMethod(2, 2);
-        System.out.println(result);
+        System.out.println("The result is: " + result);
 
     }
     public static void difference(int[] array){
@@ -25,7 +25,7 @@ public class Main {
                     min = array[i];
                 }
             }
-            System.out.println("the max number is: "+  max + "  and the min is: " + min);
+            System.out.println("The highest number is: "+  max + "  and the smallest number is: " + min);
         }
     }
 
@@ -42,7 +42,7 @@ public class Main {
                 secondMin = array[i];
             }
         }
-        System.out.println(min + " " + secondMin);
+        System.out.println("The smallest number is: " + min + " & the second smallest number is: " + secondMin);
     }
 
     public static double weirdMathMethod(double numbX, double numbY){
